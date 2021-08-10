@@ -4,8 +4,7 @@ $.getJSON('https://api.rootnet.in/covid19-in/stats/latest', function (latest) {
   $('.totalcases').append(latest.data.summary.total);
   $('.totalrecovered').append(latest.data.summary.discharged);
   $('.totalactive').append(
-    latest.data.summary.total -
-      (latest.data.summary.discharged - latest.data.summary.deaths)
+    latest.data.summary.total - (latest.data.summary.discharged - latest.data.summary.deaths)
   );
   $('.totaldeaths').append(latest.data.summary.deaths);
 });
