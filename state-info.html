@@ -19,7 +19,7 @@
 
     <!-- Custom styles for this template-->
     <link href="css/sb-admin-2.min.css" rel="stylesheet">
-    
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.6.0/jquery.min.js" integrity="sha512-894YE6QWD5I59HgZOGReFYm4dnWc1Qt5NtvYSaNcOP+u1T9qYdvdihz0PPSiiqn/+/3e7Jo4EaG7TubfWGUrMQ==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 </head>
 
 <body id="page-top">
@@ -129,6 +129,29 @@
                 </div>
                 <!-- /.container-fluid -->
 
+                <!-- Start State wise data -->
+              <div class="col-lg-12 col-md-12 col-sm-12 mb-4">
+                <div class="card card-small">
+                  <div class="card-header border-bottom">
+                    <h6 class="m-0">State Wise Data<input style="float: right" type="text" id="myTableInput" onkeyup="myTableSearch()" placeholder="Search State Name..."></h6>
+                  </div>
+                  <div class="card-body p-0">
+                    <table id="myStateTable" class="table datatable table-responsive-md table-hover" data-id-field="code" data-sort-name="value1" data-sort-order="desc" data-pagination="false" data-show-pagination-switch="false">
+                      <thead>
+                        <tr>
+                        <!--When a header is clicked, run the sortTable function, with a parameter, 0 for sorting by names, 1 for sorting by country:-->
+                          <th data-field="code" class="text-dark" data-sortable="true" onclick="sortTableStr(0)">State</th>
+                          <th data-field="code" class="text-danger" data-sortable="true" onclick="sortTableNo(1)">Cases</th>
+                          <th data-field="code" class="text-success" data-sortable="true" onclick="sortTableNo(2)">Recovered</th>
+                          <th data-field="code" class="text-info" data-sortable="true" onclick="sortTableNo(3)">Active</th>
+                          <th data-field="code" class="text-secondary" data-sortable="true" onclick="sortTableNo(4)">Deaths</th>
+                        </tr>
+                      </thead>
+                    </table>
+                  </div>
+                </div>
+              </div>
+              <!-- End state wise data -->
             </div>
             <!-- End of Main Content -->
 
@@ -174,18 +197,19 @@
     </div>
 
     <!-- Bootstrap core JavaScript-->
-    <script src="vendor/jquery/jquery.min.js"></script>
-    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <!-- <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script> -->
 
     <!-- Core plugin JavaScript-->
-    <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+    <!-- <script src="vendor/jquery-easing/jquery.easing.min.js"></script> -->
 
     <!-- Custom scripts for all pages-->
     <script src="js/sb-admin-2.min.js"></script>
 
     <!-- Page level plugins -->
+    <script src="/scripts/script2.js"></script>
      
-
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.1.3/css/bootstrap.min.css" integrity="sha384-MCw98/SFnGE8fJT3GXwEOngsV7Zt27NXFoaoApmYm81iuXoPkFOJwJ8ERdknLPMO" crossorigin="anonymous">
     <!-- Page level custom scripts -->
        
 
