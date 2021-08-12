@@ -1,5 +1,5 @@
 // fetching news
-$.getJSON('https://newsapi.org/v2/top-headlines?sources=google-news-in&apiKey=d479deebfa18494b85420954ada43be3', function (news) {
+$.getJSON('https://newsapi.org/v2/top-headlines?country=in&category=health&apiKey=d479deebfa18494b85420954ada43be3', function (news) {
     var article = news.articles
     for (let i = 0; i < article.length; i++) {
         console.log(i);
