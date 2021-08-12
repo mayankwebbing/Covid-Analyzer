@@ -1,17 +1,18 @@
 // fetching news
-$.getJSON('https://newsapi.org/v2/top-headlines?sources=google-news-in&apiKey=d479deebfa18494b85420954ada43be3', function (news) {
+$.getJSON('https://gnews.io/api/v4/top-headlines?&token=d25913e772ab575619b1395be1bd2f8e&country=in&topic=health&lang=en', function (news) {
     var article = news.articles
+    // console.log(article);
     for (let i = 0; i < article.length; i++) {
-        console.log(i);
+        // console.log(i);
         $('.des'+i).append(article[i].description);
         $('.title'+i).append(article[i].title);
-        $('.source'+i).append(article[i].source.name);
+        $('.source'+i).html('Source: <a target="_blank" href='+article[i].source.url+'>'+article[i].source.name+'</a>&nbsp;&nbsp;');
         $('.seemore'+i).html('<a href='+ article[i].url +' target="_blank" >See more...</a>');
-        if (article[i].urlToImage!=null){
+        if (article[i].image!=null){
             var image = document.createElement("IMG");
             image.alt = article[i].title;
             image.setAttribute('class', 'photo');
-            image.src= article[i].urlToImage;
+            image.src= article[i].image;
             $('.image'+i).html(image);
         }
     }
