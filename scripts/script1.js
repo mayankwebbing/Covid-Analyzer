@@ -10,7 +10,7 @@ $.getJSON('https://api.rootnet.in/covid19-in/stats/latest', function (latest) {
 });
 
 $.getJSON('https://api.covid19india.org/v4/min/timeseries.min.json', function (data) {
-  console.log(data);
+  console.log(data.mp);
   // var today = data.cases_time_series[data.cases_time_series.length - 1];
   // var yesterday = data.cases_time_series[data.cases_time_series.length - 2];
   // // console.log(today);
